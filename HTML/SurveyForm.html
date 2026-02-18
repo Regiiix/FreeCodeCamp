@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+
+<body>
+    <main>
+        <h1 id="title">Philnits Taker Survey Form</h1>
+        <p id="description">This form is designed to collect feedback from Philnits Taker.</p>
+        <form action="" id="survey-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="form-group">
+                    <label for="name" id="name-label">Name:</label>
+                    <input id="name" name="name" type="text" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email" id="email-label">Email:</label>
+                    <input type="email" name="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="number" id="number-label">Enter Score (0-180):</label>
+                    <input type="number" name="score" id="number" min="0" max="180" placeholder="Enter Score">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Experience</legend>
+                <div class="form-group">
+                    <label for="dropdown">Have you taken the Philnits test before?</label>
+                    <select name="taken_before" id="dropdown">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <p>Did you pass the test?</p>
+                    <label><input type="radio" value="yes" name="passed_test" class="inline"> Yes</label>
+                    <label><input type="radio" value="no" name="passed_test" class="inline"> No</label>
+                </div>
+
+                <div class="form-group">
+                    <p>Which resources did you use?</p>
+                    <label><input type="checkbox" name="resources" value="books" class="inline"> Books</label>
+                    <label><input type="checkbox" name="resources" value="online_courses" class="inline"> Online Courses</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Comments</legend>
+                <div class="form-group">
+                    <textarea name="comments" id="comments" placeholder="Enter your comments here"></textarea>
+                </div>
+            </fieldset>
+
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+
+</html>
